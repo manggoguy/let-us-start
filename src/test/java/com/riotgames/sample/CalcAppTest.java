@@ -88,7 +88,7 @@ public class CalcAppTest
         }catch (MyOwnRuntimeException aMyOwnRuntimeException){
             assertThat(aMyOwnRuntimeException.getMessage(), is("Invalid operator"));
             Logger logger = Logger.getLogger("logging.exception");
-            logger.info(aMyOwnRuntimeException.getMessage());
+            logger.info(aMyOwnRuntimeException.toString());
         }
 
     }
@@ -103,7 +103,7 @@ public class CalcAppTest
         }catch (MyOwnRuntimeException aMyOwnRuntimeException){
             assertThat(aMyOwnRuntimeException.getMessage(), is("Invalid operator"));
             Logger logger = Logger.getLogger("logging.exception");
-            logger.info(aMyOwnRuntimeException.getMessage());
+            logger.info(aMyOwnRuntimeException.toString());
         }
 
     }
