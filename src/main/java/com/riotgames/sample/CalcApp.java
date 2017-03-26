@@ -1,6 +1,8 @@
 package com.riotgames.sample;
 
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Calculator application
@@ -22,10 +24,11 @@ public class CalcApp {
     }
 
     public static void main( String[] args ) {
+        Logger log = Logger.getLogger("result");
         final CalcApp app = new CalcApp();
         final StringBuilder outputs = new StringBuilder();
         Arrays.asList(args).forEach(value -> outputs.append(value + " "));
-        System.out.print( "Addition of values: " + outputs + " = ");
-        System.out.println(app.calc(args));
+        log.log(Level.FINE, "Addition of values: " + outputs + " = ");
+        log.log(Level.FINE, Double.toString(app.calc(args)));
     }
 }
