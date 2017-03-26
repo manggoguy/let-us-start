@@ -89,7 +89,6 @@ public class CalcAppTest
             assertThat(aMyOwnRuntimeException.getMessage(), is("Invalid operator"));
             Logger logger = Logger.getLogger("logging.exception");
             logger.info(aMyOwnRuntimeException.getMessage());
-            throw new MyOwnRuntimeException(aMyOwnRuntimeException);
         }
 
     }
@@ -105,7 +104,6 @@ public class CalcAppTest
             assertThat(aMyOwnRuntimeException.getMessage(), is("Invalid operator"));
             Logger logger = Logger.getLogger("logging.exception");
             logger.info(aMyOwnRuntimeException.getMessage());
-            throw new MyOwnRuntimeException(aMyOwnRuntimeException);
         }
 
     }
